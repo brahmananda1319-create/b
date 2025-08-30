@@ -947,102 +947,73 @@ html { scroll-behavior: smooth; }
 </div>
 </div>
 <div class="p-10" id="formContainer">
-<form id="bookingForm">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-<div>
-<label class="block text-sm font-bold text-gray-700 mb-3">Full Name *</label>
-<input class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="fullName" placeholder="Enter your full name" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-bold text-gray-700 mb-3">Mobile Number *</label>
-<input class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="mobileNumber" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number" required="" type="tel"/>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-<div>
-<label class="block text-sm font-bold text-gray-700 mb-3">Age *</label>
-<input class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="age" max="120" min="1" placeholder="Enter your age" required="" type="number"/>
-</div>
-<div>
-<label class="block text-sm font-bold text-gray-700 mb-3">Gender *</label>
-<select class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="gender" required="">
-<option value="">Select Gender</option>
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-<option value="Other">Other</option>
-</select>
-</div>
-</div>
-<div class="mb-8">
-<label class="block text-sm font-bold text-gray-700 mb-3">Complete Address *</label>
-<textarea class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="address" placeholder="Enter your complete address in Bihar" required="" rows="4"></textarea>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-<div>
-<label class="block text-sm font-bold text-gray-700 mb-3">District *</label>
-<select class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="district" required="">
-<option value="">Select District</option>
-<option value="Darbhanga">Darbhanga</option>
-<option value="Madhubani">Madhubani</option>
-<option value="Samastipur">Samastipur</option>
-<option value="Muzaffarpur">Muzaffarpur</option>
-<option value="Patna">Patna</option>
-<option value="Gaya">Gaya</option>
-<option value="Bhagalpur">Bhagalpur</option>
-<option value="Begusarai">Begusarai</option>
-<option value="Chapra">Chapra</option>
-<option value="Purnia">Purnia</option>
-<option value="Saharsa">Saharsa</option>
-<option value="Motihari">Motihari</option>
-<option value="Arrah">Arrah</option>
-<option value="Katihar">Katihar</option>
-<option value="Sasaram">Sasaram</option>
-<option value="Hajipur">Hajipur</option>
-<option value="Munger">Munger</option>
-<option value="Siwan">Siwan</option>
-<option value="Bettiah">Bettiah</option>
-<option value="Other">Other</option>
-</select>
-</div>
-<div>
-<label class="block text-sm font-bold text-gray-700 mb-3">Preferred Time *</label>
-<select class="form-input w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium" id="preferredTime" required="">
-<option value="">Select Time</option>
-<option value="Morning (8 AM - 12 PM)">Morning (8 AM - 12 PM)</option>
-<option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
-<option value="Evening (4 PM - 8 PM)">Evening (4 PM - 8 PM)</option>
-</select>
-</div>
-</div>
-<div class="mb-8">
-<label class="flex items-center">
-<input class="mr-4 w-5 h-5 text-blue-600" id="agreeTerms" required="" type="checkbox"/>
-<span class="font-medium text-gray-700 text-lg">I agree to the <a class="text-blue-600 hover:text-blue-800 font-bold" href="#">Terms &amp; Conditions</a> and <a class="text-blue-600 hover:text-blue-800 font-bold" href="#">Privacy Policy</a></span>
-</label>
-</div>
-<div class="bg-blue-50 p-6 rounded-2xl mb-8" id="testSummary">
-<h3 class="font-black text-gray-800 mb-4 text-xl">Test Summary</h3>
-<div class="flex justify-between items-center mb-4">
-<span class="text-gray-600 font-medium text-xl" id="summaryTestName">Test Name</span>
-<span class="text-3xl font-black text-blue-600" id="summaryPrice">₹0</span>
-</div>
-<div class="space-y-2">
-<p class="text-gray-600 font-medium">✓ Free home sample collection in Bihar</p>
-<p class="text-gray-600 font-medium">✓ Digital reports via WhatsApp</p>
-<p class="text-gray-600 font-medium">✓ Same day results</p>
-<p class="text-gray-600 font-medium">✓ Expert consultation included</p>
-</div>
-</div>
-<div class="flex flex-col sm:flex-row gap-6">
-<button class="flex-1 bg-gray-300 text-gray-700 py-5 px-8 rounded-2xl hover:bg-gray-400 transition font-bold text-xl" onclick="closeBookingModal()" type="button">
-                            Cancel
-                        </button>
-<button class="flex-1 smart-btn bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5 px-8 rounded-2xl hover:from-blue-700 hover:to-purple-700 transition font-bold text-xl shadow-xl" type="submit">
-<i class="fas fa-calendar-check mr-3"></i>
-                            Book Test Now
-                        </button>
-</div>
+
+<form id="bookingForm" class="space-y-3" action="https://formspree.io/f/xgvlkebl" method="POST">
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label class="block text-sm font-medium">Full Name</label>
+      <input type="text" name="name" id="name" required class="w-full p-2 border rounded">
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Phone</label>
+      <input type="text" name="phone" id="phone" required class="w-full p-2 border rounded">
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label class="block text-sm font-medium">District</label>
+      <select name="district" id="district" required class="w-full p-2 border rounded">
+        <option value="">-- Select District --</option>
+        <option>Araria</option><option>Arwal</option><option>Aurangabad</option><option>Banka</option>
+        <option>Begusarai</option><option>Bhagalpur</option><option>Bhojpur</option><option>Buxar</option>
+        <option>Darbhanga</option><option>East Champaran</option><option>Gaya</option><option>Gopalganj</option>
+        <option>Jamui</option><option>Jehanabad</option><option>Kaimur</option><option>Katihar</option>
+        <option>Khagaria</option><option>Kishanganj</option><option>Lakhisarai</option><option>Madhepura</option>
+        <option>Madhubani</option><option>Munger</option><option>Muzaffarpur</option><option>Nalanda</option>
+        <option>Nawada</option><option>Patna</option><option>Purnea</option><option>Rohtas</option>
+        <option>Saharsa</option><option>Samastipur</option><option>Saran</option><option>Sheikhpura</option>
+        <option>Sheohar</option><option>Sitamarhi</option><option>Siwan</option><option>Supaul</option>
+        <option>Vaishali</option><option>West Champaran</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium">PIN Code</label>
+      <input type="text" name="pincode" id="pincode" pattern="[0-9]{6}" maxlength="6" required class="w-full p-2 border rounded" placeholder="e.g. 800001">
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Full Address</label>
+    <textarea name="address" id="address" required class="w-full p-2 border rounded" placeholder="House No, Street, Area"></textarea>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Test/Package</label>
+    <input type="text" name="test" id="test" required class="w-full p-2 border rounded">
+  </div>
+
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label class="block text-sm font-medium">Preferred Date</label>
+      <input type="date" name="date" id="date" required class="w-full p-2 border rounded">
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Preferred Time</label>
+      <input type="time" name="time" id="time" required class="w-full p-2 border rounded">
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Notes</label>
+    <textarea name="notes" id="notes" class="w-full p-2 border rounded"></textarea>
+  </div>
+
+  <button type="submit" class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg">
+    Confirm Booking
+  </button>
 </form>
+
 </div>
 </div>
 </div>
@@ -1194,36 +1165,73 @@ html { scroll-behavior: smooth; }
 <button class="text-gray-500 hover:text-gray-800" data-close-booking="" type="button">×</button>
 </div>
 <div class="p-6">
-<form class="grid grid-cols-1 md:grid-cols-2 gap-4" id="bookingForm">
-<div>
-<label class="block text-sm font-medium">Full Name</label>
-<input class="form-input w-full px-4 py-2 rounded-xl border" name="name" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium">Phone</label>
-<input class="form-input w-full px-4 py-2 rounded-xl border" name="phone" required="" type="tel"/>
-</div>
-<div class="md:col-span-2">
-<label class="block text-sm font-medium">Test/Package</label>
-<input class="form-input w-full px-4 py-2 rounded-xl border" name="test" placeholder="e.g., CBC, Full Body Checkup" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium">Preferred Date</label>
-<input class="form-input w-full px-4 py-2 rounded-xl border" name="date" required="" type="date"/>
-</div>
-<div>
-<label class="block text-sm font-medium">Preferred Time</label>
-<input class="form-input w-full px-4 py-2 rounded-xl border" name="time" type="time"/>
-</div>
-<div class="md:col-span-2">
-<label class="block text-sm font-medium">Notes</label>
-<textarea class="form-input w-full px-4 py-2 rounded-xl border" name="notes" rows="3"></textarea>
-</div>
-<div class="md:col-span-2 flex items-center justify-between mt-2">
-<p class="text-sm" id="bookingStatus"></p>
-<button class="px-5 py-2 rounded-xl bg-green-600 text-white hover:opacity-90 smart-btn" type="submit">Confirm Booking</button>
-</div>
+
+<form id="bookingForm" class="space-y-3" action="https://formspree.io/f/xgvlkebl" method="POST">
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label class="block text-sm font-medium">Full Name</label>
+      <input type="text" name="name" id="name" required class="w-full p-2 border rounded">
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Phone</label>
+      <input type="text" name="phone" id="phone" required class="w-full p-2 border rounded">
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label class="block text-sm font-medium">District</label>
+      <select name="district" id="district" required class="w-full p-2 border rounded">
+        <option value="">-- Select District --</option>
+        <option>Araria</option><option>Arwal</option><option>Aurangabad</option><option>Banka</option>
+        <option>Begusarai</option><option>Bhagalpur</option><option>Bhojpur</option><option>Buxar</option>
+        <option>Darbhanga</option><option>East Champaran</option><option>Gaya</option><option>Gopalganj</option>
+        <option>Jamui</option><option>Jehanabad</option><option>Kaimur</option><option>Katihar</option>
+        <option>Khagaria</option><option>Kishanganj</option><option>Lakhisarai</option><option>Madhepura</option>
+        <option>Madhubani</option><option>Munger</option><option>Muzaffarpur</option><option>Nalanda</option>
+        <option>Nawada</option><option>Patna</option><option>Purnea</option><option>Rohtas</option>
+        <option>Saharsa</option><option>Samastipur</option><option>Saran</option><option>Sheikhpura</option>
+        <option>Sheohar</option><option>Sitamarhi</option><option>Siwan</option><option>Supaul</option>
+        <option>Vaishali</option><option>West Champaran</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium">PIN Code</label>
+      <input type="text" name="pincode" id="pincode" pattern="[0-9]{6}" maxlength="6" required class="w-full p-2 border rounded" placeholder="e.g. 800001">
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Full Address</label>
+    <textarea name="address" id="address" required class="w-full p-2 border rounded" placeholder="House No, Street, Area"></textarea>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Test/Package</label>
+    <input type="text" name="test" id="test" required class="w-full p-2 border rounded">
+  </div>
+
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label class="block text-sm font-medium">Preferred Date</label>
+      <input type="date" name="date" id="date" required class="w-full p-2 border rounded">
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Preferred Time</label>
+      <input type="time" name="time" id="time" required class="w-full p-2 border rounded">
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Notes</label>
+    <textarea name="notes" id="notes" class="w-full p-2 border rounded"></textarea>
+  </div>
+
+  <button type="submit" class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg">
+    Confirm Booking
+  </button>
 </form>
+
 </div>
 </div>
 </div>
